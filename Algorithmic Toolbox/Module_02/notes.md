@@ -142,8 +142,6 @@ Initially, we might think counting lines of code is a good way to measure runtim
 - **Compilers optimize code differently.**  
   - The same program may execute **differently** based on how it's compiled.
 
----
-
 ### **Fibonacci Number Calculation Example**
 
 We analyze a simple Fibonacci number calculation algorithm:
@@ -200,8 +198,6 @@ for i in range(2, n + 1):
 - **Perform addition**
 - **Store the result**
 
----
-
 ### **Visualizing Execution Flow**
 
 #### **Memory Allocation in Array Creation**
@@ -230,8 +226,6 @@ Each Fibonacci number depends on the sum of the previous two:
 fib(3)  fib(2) fib(2) fib(1)
 ```
 For `n=5`, **each call depends on previous results**.
-
----
 
 ### **Why Counting Lines of Code Fails**
 
@@ -271,8 +265,6 @@ Computing exact runtimes is **hard** because:
 
 We need a way to **compare algorithms** without worrying about small details. **Asymptotic notation** helps us measure how an algorithm’s runtime grows as input size (`n`) increases.
 
----
-
 ### **Ignoring Constant Multiples**
 - Some factors affect runtime by a **constant multiple** (e.g., a faster CPU reduces time but does not change growth rate).
 - If one system is **100 times faster**, it still follows the **same runtime pattern**.
@@ -282,8 +274,6 @@ We need a way to **compare algorithms** without worrying about small details. **
   - When `n` is **very large**, both still grow similarly.
   
 So, we **ignore constant multiples** and focus on **how the function scales with `n`**.
-
----
 
 ### **Asymptotic Growth - How Runtime Scales with Input Size**
 Instead of exact runtimes, we check **how runtime increases** as `n` grows:
@@ -304,8 +294,6 @@ Instead of exact runtimes, we check **how runtime increases** as `n` grows:
 - **O(n) and O(n log n) can handle big inputs.**
 - **O(n²) struggles with large inputs.**
 - **O(2ⁿ) is impractical for large `n`.**
-
----
 #### **Simple Examples for Each Complexity**
 ##### **O(1) - Constant Time**
 **Real-World Example:** Taking one cookie from a jar.
