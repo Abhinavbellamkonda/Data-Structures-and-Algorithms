@@ -285,13 +285,14 @@ Instead of exact runtimes, we check **how runtime increases** as `n` grows:
 ##### **Example: Comparing Growth Rates**
 | Complexity  | Input Size `n` = 1M | Time Needed |
 |------------|-----------------|---------|
+|**O(log n)| 500000 | Very Fast |
 | **O(n)**  | 1,000,000 | Fast  |
 | **O(n log n)** | ~30,000,000 | Slower |
 | **O(n²)** | 30,000,000,000 | Very Slow |
 | **O(2ⁿ)** | `n = 50` → 2 weeks! | Impossible |
 
 **Tips:**
-- **O(n) and O(n log n) can handle big inputs.**
+- **O(log n), O(n) and O(n log n) can handle big inputs.**
 - **O(n²) struggles with large inputs.**
 - **O(2ⁿ) is impractical for large `n`.**
 #### **Simple Examples for Each Complexity**
@@ -422,9 +423,8 @@ For example:
 ### **Big-O Limitations**
 - **It ignores constants**: `O(2n)` and `O(n)` are treated the same, even though `2n` is twice as slow.
 - **It only cares about large inputs**: Sometimes a slower Big-O is faster for small numbers.
-- 
-### **Basic Rules of Big-O (Explained Clearly)**
 
+### **Basic Rules of Big-O (Explained Clearly)**
 ### **Ignore Constants**
  - **Example:** `O(7n³) = O(n³)` 
  - **Example:** `O(n² / 3) = O(n²)`  
