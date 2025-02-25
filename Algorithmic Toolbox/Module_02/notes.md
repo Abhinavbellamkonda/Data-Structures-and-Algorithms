@@ -277,19 +277,20 @@ So, we **ignore constant multiples** and focus on **how the function scales with
 
 ### **Asymptotic Growth - How Runtime Scales with Input Size**
 Instead of exact runtimes, we check **how runtime increases** as `n` grows:
+- **O(log n)** Log-linear growth (used in efficient sorting algorithms)
 - **O(n):** Linear growth (proportional to input size).
 - **O(n log n):** Log-linear growth (used in efficient sorting algorithms).
 - **O(n²):** Quadratic growth (much slower as `n` increases).
 - **O(2ⁿ):** Exponential growth (becomes impossible for large `n`).
 
 ##### **Example: Comparing Growth Rates**
-| Complexity  | Input Size `n` = 1M | Time Needed |
-|------------|-----------------|---------|
-|**O(log n)| 500000 | Very Fast |
-| **O(n)**  | 1,000,000 | Fast  |
+| Complexity     | Input Size `n` = 1M | Time Needed |
+|----------------|-----------------|---------|
+| **O(log n)**   | 500000 | Very Fast |
+| **O(n)**       | 1,000,000 | Fast  |
 | **O(n log n)** | ~30,000,000 | Slower |
-| **O(n²)** | 30,000,000,000 | Very Slow |
-| **O(2ⁿ)** | `n = 50` → 2 weeks! | Impossible |
+| **O(n²)**      | 30,000,000,000 | Very Slow |
+| **O(2ⁿ)**      | `n = 50` → 2 weeks! | Impossible |
 
 **Tips:**
 - **O(log n), O(n) and O(n log n) can handle big inputs.**
