@@ -123,3 +123,21 @@ plt.ylabel("Growth")
 plt.title("Comparison of n^0.1 vs (log n)^5")
 plt.show()
 ```
+
+# **Logarithm Rules for Algorithm Analysis**
+
+## **Logarithm Properties and Examples**
+
+| **Rule** | **Formula** | **Example** |
+|----------|------------|------------|
+| **Log of an exponent** | \\( \\log_a (n^k) = k \\log_a n \\) | \\( \\log_2 (8^3) = 3 \\log_2 8 = 9 \\) |
+| **Log of a product** | \\( \\log_a (n \\cdot m) = \\log_a n + \\log_a m \\) | \\( \\log_2 (8 \\times 4) = 3 + 2 = 5 \\) |
+| **Log of a power** | \\( n \\log_a b = b \\log_a n \\) | \\( 5 \\log_2 3 = 3 \\log_2 5 \\) |
+| **Change of base** | \\( \\log_a n \\cdot \\log_b a = \\log_b n \\) | \\( \\log_2 10 \\times \\log_{10} 2 = 1 \\) |
+
+## **Why Are Logarithm Rules Useful?**
+- Logarithms appear when **problems are repeatedly divided into smaller parts** (Binary Search, Merge Sort, Recursion).
+- They help estimate **how many times we divide an input** before it becomes trivial.
+- The rules simplify logarithmic expressions **when analyzing complexity**.
+
+---

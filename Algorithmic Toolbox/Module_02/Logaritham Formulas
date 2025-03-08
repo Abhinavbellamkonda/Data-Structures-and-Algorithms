@@ -1,0 +1,150 @@
+# **Understanding Logarithm Formulas in Big-O Notation**
+
+## **🔹 Why Do Logarithms Matter in Big-O?**
+Logarithms are crucial in **algorithm complexity analysis** because they appear in:
+- **Binary Search (`O(log n)`)** → Halving the search space.
+- **Merge Sort (`O(n log n)`)** → Splitting and merging elements.
+- **Tree-based algorithms (`O(log n)`)** → Traversing balanced trees.
+
+These formulas help us **simplify complexity expressions** and compare growth rates efficiently.
+
+---
+
+## **Formula: \( \log_a(n^k) = k \log_a n \)**
+### **Mathematical Explanation**
+This formula follows the **power rule of logarithms**:
+\[
+\log_a(n^k) = k \times \log_a n
+\]
+
+### **Proof**
+By the definition of logarithms:
+\[
+x = \log_a n  \quad \text{means} \quad a^x = n
+\]
+If we raise both sides to `k`:
+\[
+a^{kx} = n^k
+\]
+Taking \( \log_a \) on both sides:
+\[
+\log_a(n^k) = k \log_a n
+\]
+
+### **Example in Big-O**
+If an algorithm takes `n²` steps, we express it logarithmically:
+\[
+O(\log_2(n^2)) = 2 \log_2 n
+\]
+This is useful for analyzing **recursive trees** where each level doubles in size.
+
+---
+
+## **Formula: \( \log_a(nm) = \log_a n + \log_a m \)**
+### **Mathematical Explanation**
+This formula helps **convert multiplication inside a logarithm into addition**.
+
+### **Proof**
+By the definition of logarithms:
+\[
+a^x = n, \quad a^y = m
+\]
+Multiplying both equations:
+\[
+a^x \cdot a^y = nm
+\]
+Since **exponents add when multiplying**, we get:
+\[
+a^{x+y} = nm
+\]
+Taking \( \log_a \) on both sides:
+\[
+\log_a(nm) = x + y
+\]
+Since \( x = \log_a n \) and \( y = \log_a m \), we get:
+\[
+\log_a(nm) = \log_a n + \log_a m
+\]
+
+### **Example in Big-O**
+Merge Sort splits an array into halves (`O(log n)`) and processes `n` elements at each level:
+\[
+O(n \log_2 n)
+\]
+This formula explains why **merging two sorted lists adds up logarithmically**.
+
+---
+
+## **Formula: \( n \log_a b = b \log_a n \)**
+### **Mathematical Explanation**
+This formula allows us to **swap bases** in logarithmic expressions.
+
+### **Proof**
+Using the logarithm change of base formula:
+\[
+\log_a b = \frac{\log_c b}{\log_c a}
+\]
+Multiplying both sides by `n`:
+\[
+n \log_a b = n \cdot \frac{\log_c b}{\log_c a}
+\]
+Rewriting in terms of `b`:
+\[
+b \log_a n = n \log_a b
+\]
+
+### **Example in Big-O**
+If an algorithm grows exponentially:
+\[
+O(3^{\log_2 n})
+\]
+Using this formula:
+\[
+O(n^{\log_2 3})
+\]
+This helps compare different exponential growth rates.
+
+---
+
+## **Formula: \( \log_a n \cdot \log_b a = \log_b n \)**
+### **Mathematical Explanation**
+This formula is useful for **changing logarithm bases easily**.
+
+### **Proof**
+Using the **change of base rule**:
+\[
+\log_b n = \frac{\log_a n}{\log_a b}
+\]
+Multiplying both sides by `\log_b a`:
+\[
+\log_a n \cdot \log_b a = \log_b n
+\]
+
+### **Example in Big-O**
+For a **Binary Search** algorithm (`O(log n)`), if we need a different log base:
+\[
+O(\log_2 n \cdot \log_3 2) = O(\log_3 n)
+\]
+This lets us **convert log base complexity easily**.
+
+---
+
+## **Summary of Logarithm Formulas and Their Big-O Applications**
+| **Formula**  | **Mathematical Meaning** | **Big-O Use Case** |
+|-------------|----------------------|---------------------|
+| \( \log_a(n^k) = k \log_a n \) | Exponents move to the front | Depth of recursive trees |
+| \( \log_a(nm) = \log_a n + \log_a m \) | Multiplication inside log = Addition outside | Merge Sort (O(n log n)) |
+| \( n \log_a b = b \log_a n \) | Swaps logarithm bases | Exponential recursive growth |
+| \( \log_a n \cdot \log_b a = \log_b n \) | Base conversion in logarithms | Binary Search complexity |
+
+---
+
+## **Common Algorithmic Runtimes and Their Logarithmic Components**
+| **Algorithm** | **Big-O Complexity** | **Logarithmic Component** |
+|-------------|----------------------|---------------------------|
+| **Binary Search** | O(log n) | Divides input size by 2 at each step |
+| **Merge Sort** | O(n log n) | Recursively splits and merges |
+| **Heap Sort** | O(n log n) | Building and extracting from a heap |
+| **Tree Traversal (Balanced BST)** | O(log n) | Searching in a balanced tree |
+| **Exponential Growth** | O(2ⁿ) | Number of recursive calls doubles each step |
+
