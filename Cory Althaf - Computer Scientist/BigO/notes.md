@@ -122,7 +122,7 @@ f(n) = 1+(1+1+1)n**3
 f(n) = 1+3n**3
 ```
 
-We will consider n**2 and ignore remaining all in order of magnitude.
+We will consider n**3 and ignore remaining all in order of magnitude.
 
 
 ### Exponential Time Complexity
@@ -139,6 +139,4 @@ for i in rage(10**n):
   print(i) 
 ```
 
-
-
-*tip - when we are comparing two algorithms we often look at average time complecity of both.*
+*tip - when we are comparing two algorithms we often look at average time complexity of both.*
