@@ -12,7 +12,9 @@ How do you know which algorithm is best? Is it simple? The fastest? The Smallest
 
 We will judge the Algorithm by run time.
 
-Lets take a example of sorting a list
+Lets take a example of sorting a list, we can sort list in many ways.
+
+for example:
 
 ```
 import time
@@ -27,7 +29,7 @@ print(end-start)
 
 Rerun the code again you will see different excecution time because available proccessing power, computer and various variables. This is not effective way to compare. Instead, Computer Scientist compare number of the steps required for Algorithm.
 
-For example
+For example:
 
 ```
 
@@ -37,7 +39,7 @@ for i in range(5):
 f(n) = 5
 ```
 
-This requires 5 steps. If you make program more complicated your equation will change
+This requires 5 steps. If you make program more complicated your equation will change.
 
 ```
 count = 0
@@ -76,7 +78,7 @@ O(Log n) - Algorithms such as binary search that can discord many values at each
 
 ### Linear Time Complexity
 
-O(n) - The linear time grows same rate as the size of the problem
+O(n) - The linear time grows same rate as the size of the problem.
 
 
 ### Log Linear Time Complexity
@@ -100,7 +102,7 @@ f(n) = 1+(1+1)n*n
 f(n) = 1+2n**2
 ```
 
-We will consider n**2 and ignore remaining all in order of magnitude
+We will consider n**2 and ignore remaining all in order of magnitude.
 
 
 ### Cubic Time Complexity
@@ -120,7 +122,7 @@ f(n) = 1+(1+1+1)n**3
 f(n) = 1+3n**3
 ```
 
-We will consider n**2 and ignore remaining all in order of magnitude
+We will consider n**2 and ignore remaining all in order of magnitude.
 
 
 ### Exponential Time Complexity
@@ -139,4 +141,4 @@ for i in rage(10**n):
 
 
 
-*tip - when we are comparing two algorithms we often look at average time complecity of both*
+*tip - when we are comparing two algorithms we often look at average time complecity of both.*
